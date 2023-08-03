@@ -12,8 +12,8 @@ public class FinishLine : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             finishEffect.Play();
+            GetComponent<AudioSource>().Play();
             Invoke("ReloadScene", 1f);
-            Debug.Log("You win!");
         }
     }
 
